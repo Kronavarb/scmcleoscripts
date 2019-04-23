@@ -1,0 +1,74 @@
+
+
+                Ooscar713's Created and Found OPCODES
+
+                  BY: Ooscar713
+
+_________________________________________
+Note: things like (Y Cord), (X Cord), (Ammount of money), (Z Cord) etc...... is the thing its asking you...for example:
+
+if a code says sumthin like:
+
+04A6: $710 = create_asset_money_pickup_at  (X Cord) (Y Cord)  (Z Cord) money  10000 $712
+
+then put the x cord y cord and z cord and ammount of money without the paranthesis!
+____________________________________________
+1. Makin Money Asset Appear:
+
+04A6: $710 = create_asset_money_pickup_at  (X Cord) (Y Cord)  (Z Cord) money  (Ammount of money) $712
+
+2. Slot Machine Using Animation:
+
+0513: 'SLOT_02' @14   ; ~t~ Use Slot Machine $~1~
+
+3. Make Money Icons Appear(Cash):
+
+02E1: @136(@212,2i) = create_cash_pickup  (Ammount of money) at  (X Cord) (Y Cord)  (Z Cord) unknown  1 
+
+4. Make one of the ballas sell drugs to you:(its a certain type of balla...always the same balla)
+
+08E8: assign_external_script_handle 'DEALER' to_actor_model #BALLAS1
+
+5. Find Tenpenny in a place u want him to be:(i made this code up)...try it:
+
+023C: load_special_actor  1 'TENPEN' at (X Cord) (Y Cord) (Z Cord)
+
+6. CJ Sells Drugs:(Made it up)....(if it doesn't work change
+the word #PLAYER_ACTOR to #PLAYER)!!
+
+08E8: assign_external_script_handle 'DEALER' to_actor_model #PLAYER_ACTOR
+
+7. choose where you restart after getting killed:
+
+016C: restart_if_wasted at  (X Cord) (Y Cord)  (Z Cord) angle  137.0 unknown  0 
+
+8. Walk like a fat guy:(might not work)....try it(i made it)
+
+0245: set_actor $1 walk_style_to "FATMAN"
+
+9. Get even more than six stars:(might work)
+
+01F0: set_max_wanted_level_to  (#)
+
+10. Create a horseshoe:
+
+0959: $2881 = create_horseshoe_at  (X Cord)  (Y Cord)  (Z Cord) 
+
+11. create an oyster:
+
+095A: $2981 = create_oyster_at  (X Cord) (Y Cord) (Z Cord) 
+
+12. spawn a  random pedestrian at a place u want:
+
+0376: @18 = create_random_actor (X Cord)  (Y Cord)  (Z Cord)
+
+13. i think for this one u create a red mission sphere at the coordinates u want them:
+
+03BC: @149 = create_sphere  (X Cord)  (Y Cord)  (Z Cord)  1.0
+
+14. make a random fire:
+
+02CF: create_fire_at  (X Cord)  (Y Cord)  (Z Cord)  0  1 @142(@213,21i) 
+________________________________________
+
+hope these helped!!!!!1

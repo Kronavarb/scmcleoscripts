@@ -1,0 +1,157 @@
+WARNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!:view in full screen.....:)....By Ooscar713                              ~GTA SA OPCODES DATABASE~
+_____________________________________________________________________________________________________________________________
+
+Code Name:                                       Type:                                              Code:                                                                                         Description:
+_____________________________________________________________________________________________________________________________
+1. -Claude Speed Skin		Found		09C7: change_player_skin $PLAYER_CHAR to 105		 	Change Skin To Claude Speed	
+2. -Kill Yourself		Found		05BE: kill_actor $PLAYER_ACTOR				Kills Yourself
+3. -Fast Carjack		Found		05CB: $Actor1 enter_car $car 1				Teleport Inside Car You Wish
+4. -Attach Cars		Found		0683: $car1 $car2  0.0 -4.6  .65  15.0  0.0  0.0			Attach Car1 to Car2
+5. -Change Skin		Made-Up		09C7: change_player_skin $PLAYER_CHAR to (Enter # Here)		Change Skin To Any Body
+6. -Drunk Vision		Found		052C: set_player $PLAYER_CHAR drunk_visuals  100		Makes Screen Wavy
+7. -Dual Weopons		Found		081A: $actor  2						Makes Guns Dual-Weildable
+8. -Boxing Fighting Style	Found		07FE: set_actor $PLAYER_ACTOR fighting_style_to  5  6		Gives Player Boxing Fighting Style
+
+9. -Fighting Style Change	Found		07FE: set_actor $PLAYER_ACTOR fighting_style_to  (Enter # Here)  6	Changes Players Fighting Style
+To What You Want, WARNING: when you choose a number and put it where it says 'enter # here' make sure its either from 4-16 any other number crashes the game
+
+10. -Turn Off Area 69 Laws	Found		07A8:  toggle_military_zones 0				             Turns Off Military Protection at Area 69
+
+11. -Make A Ped Go-to Location  Found		05D3=6,unknown_action_sequence %1d% %2d% %3d% %4d% %5h% %6d%      Makes a ped go-to a place u want him to go.....WARNING: %1d% is the pedestrian, %2d%,%3d%, and %4d$ is X,Y,Z Coordinates, %5h% is the movement only pick one number can only be 4,5, or 6, %6d% is the time limit (in milliseconds) if this time has passed pedestrian will be teleported to his location!, if this is set to -2 there is no time limit!
+
+12. -Make A Ped Go-to Car's Passenger Seat(Found)    0430: PUT_ACTOR $(Actor) IN_CAR_AS_PASSENGER $Car $Seat 	Gets Ped In Passenger Seat Of A Car
+
+13. -One Wheel Lowrider Hydraulics (Found)	07F5: @1  1.0  1.0  1.0  1.0					Gets Lowriders Hydraulics To One Wheel
+
+14. -Make A Car Follow You       Found		07F8: @1 @0  10.0						Makes A Car Follow Your Car
+15. -Leave Car & Attack	Found		05E2=2,unknown_action_sequence (Actor) (Actor) 			Makes A Ped Attack A Ped
+16. -Trip Skip To A Location	Found		0950: trip_skip (X Cord) (Y Cord) (Z Cord) angle 0			Teleports Car To Location With You
+17. -Put Jetpack On Ped	Made-Up		07A7: put_jetpack_on_actor $(Actor)				Puts A Jetpack On A Ped
+18. -Player Chews Gum	Found		05BA: action_sequence actor @1 chew_gum -1 ms			Makes Player Chew Gum
+19. -Make Ped Move Mouth	Found		0967: actor $(Actor) move_mouth_for (Milliseconds) ms		Makes Ped Or Player Move Mouth
+20. -Keep Stuff After Busted	Found		08DE: keep_stuff_after_busted 0				Keeps Stuff After Busted
+21. -Keep Stuff After Wasted	Found		08DD: keep_stuff_after_wasted 0				Keeps Stuff After Wasted
+22. -Helicopter Follows You Or Ped---(Found)	0726: helictoper @1 follow_actor $(Actor) follow_car -1 radius 20.0	Helicopter Follows Ped Or Player
+23. -Droppable Weopons	Found		087E: set_actor @5 weapon_droppable 1				You Can Drop Weopons
+
+24. -Make Blood Gush	Found		09B8: create_blood_gush_at $73 $74 $75 offset 5.0 -5.0 10.0 density 100 on_actor $(Actor)	Makes Blood Gush On Player Or Ped
+
+25. -Create An Entrence Marker------(Found)	0A40: create_entrance_marker_at (X Cord) (Y Cord) (Z Cord) = @0	Creates An Entrance To Somewhere (Do Not Know What '= @0' Means...Could Be Location Of The Building
+
+26. -Photograph Screen	Found		0A1E: 1							Takes A Picture
+27. -Houses Enterable	Found		09E6:  1							Makes Houses  Enterable
+28. -Make Fire		Found		02CF: create fire at $(X Cord) $(Y Cord) $(Z Cord) 1 4 $fire1		Creates fire At Location
+29. -Make Ped Kill Someone	Found		05E2: unknown_action_sequence @1 $(Actor)			Makes A Ped Kill A Ped Or You
+30. -Make Someone Kill Someone----(Found)	05E2: unknown_action_sequence $(Actor) $(Actor)			Makes Someone Kill Someone
+31. -Sit Down		Found		06B0: unknown_action_sequence $(Acotr)  80000			Makes An Actor Sit Down
+
+32. -Hunter Hitman		Found		0841: @0  1 						Hunter Chases And Attacks You (Guns)
+					0724: @0 $PLAYER_ACTOR  30.0
+
+33. -Drive-By To A Car	Found		0713: unknown_action_sequence $(Actor) -1 $(Car ID)  0.0  0.0  0.0  100.0  0  0  90		Makes An Actor Do A Drive-By On A Car
+
+34. -Drive-By To Actor	Found		0713: unknown_action_sequence $(Actor) $(Actor) -1  0.0  0.0  0.0  5000.0  4  1  40		Makes An Actor Do A Drive-By To An Actor
+
+35. -Turn Nightvision On	Found		08B1=1,turn_nightvision_on %1h%						Not Sure How It Works
+
+36. -Actor Headshots Actor	Found		0446=2,enable_actor %1d% headshot %2h%					Not Sure How It Works
+
+37. -Abort Mission		Found		045C: abort_mission						Stops current Mission
+
+38. -Make boxes On Screen	Found		038E: draw_box_on_screen 200.0 200.0 width_height 100.0 100.0 color 0  0  0 oppacity 255	Makes A Box On Screen
+
+39. -Take Boxes Off Screen	Found		03F0: text draw toggle  0					Take boxes Off Screen
+
+40. -Actor Falls down	Found		05BB: actor_task_fall_down  $(Actor) 0  (Milliseconds)		Makes Actor Run Into Wall And Fall Down			
+
+41. -Actor In Vehicle		Found		00DB: is_actor $(Actor) in_vehicle $(Vehicle)			Puts an actor in a vehicle
+42. -Actor In Any Vehicle	Found		0449: is_actor $(Actor) inside_any_vehicle			Puts an actor in any vehicle
+43. -Colliding Vehicles	Found		09CB:  vehicle $(Vehicle) colliding_with_vehicle (Enter # Here)@	Makes two vehicles collide
+44. -Breakable Walls With Swat Van-----(Found)	07F7: toggle_object $2721 indestructible 1			Makes walls breakable with swat van
+
+45. -Gang Strength Limit Set	Found		08F4=1,set_gang_strengt_limit_to %1h%				Sets gang strenghth limit, WARNING: i think the word %1h% is where you place percent....(in the '1h' part)
+
+46. -Make Actor Climb	Found		0A29:  player $(Actor) climbing				Makes actor climb stuff, (if the word 'player' dont work, then replace it with the word 'actor'!
+
+47. -Hidden Package		Found		02EC: put_hidden_package_at (X Cord) (Y Cord) (Z Cord)		Places hidden package(might not work)
+48. -Make A Ped Go-to Location 2-----(Found)	0211: walk_actor_to_point $(Actor), (X Cord), (Y Cord)		walks actor to location you put
+
+49. -Makin Money Asset	Found		04A6: $710 = create_asset_money_pickup_at  (X Cord) (Y Cord)  (Z Cord) money  (Ammount of money) $712       Makes Money Asset Appear
+
+50. -Slot Machine Text Box	Found		0513: 'SLOT_02' @14   ; ~t~ Use Slot Machine $~1~			Text box appears
+
+60. -Make Money Icons	Found		02E1: @136(@212,2i) = create_cash_pickup  (Ammount of money) at  (X Cord) (Y Cord)  (Z Cord) unknown  1 
+Make money icons appear
+
+61. -Ballas Sell Drugs To You	Found		08E8: assign_external_script_handle 'DEALER' to_actor_model #BALLAS1	A balla sells drugs to you
+62. -Tenpenny Spawns	Found		023C: load_special_actor  1 'TENPEN' at (X Cord) (Y Cord) (Z Cord)		Tenpenny appears
+63. -Sell Drugs		Found		08E8: assign_external_script_handle 'DEALER' to_actor_model #PLAYER_ACTOR	Sell drugs
+
+64. -Restart After Wasted	Found		016C: restart_if_wasted at  (X Cord) (Y Cord)  (Z Cord) angle  137.0 unknown  0 	Restart where you want after wasted
+
+65. -Walk Fat		Made-Up		0245: set_actor $PLAYER_ACTOR walk_style_to "FATMAN"		Walk like a fat guy
+66. -More Than Six Stars	Found		01F0: set_max_wanted_level_to  (#)				Set max wanted level
+67. -Create A Horseshoe	Found		0959: $2881 = create_horseshoe_at  (X Cord)  (Y Cord)  (Z Cord) 	Create Horseshoe
+68. -Create An Oyster	Found		095A: $2981 = create_oyster_at  (X Cord) (Y Cord) (Z Cord) 		Create Oyster
+69. -Random Pedestrian	Found		0376: @18 = create_random_actor (X Cord)  (Y Cord)  (Z Cord)		Creates random ped
+70. -Create Sphere		Found		03BC: @149 = create_sphere  (X Cord)  (Y Cord)  (Z Cord)  1.0		Creates Mission Spheres
+71. -Random Fire		Found		02CF: create_fire_at  (X Cord)  (Y Cord)  (Z Cord)  0  1 @142(@213,21i) 	Makes Random Fire
+72. -Create Marker		Found		0186: $61 = create_marker_above_car $(#)			Creates Marker Above Car
+73. -Create Car		Found		00A5: @0 = create_car #(Car) at  (X Cord)   (Y Cord)   (Z Cord)	Spawn Car
+
+
+
+74. -Ooscar's Tips #1:	Made-Up		Ok some people may wonder how to create a simple mission script or whatever to activate one of these codes
+well,lemme show u!!!!!!:)
+
+				1-first download Cleo 3 Library/Cleo or whatever
+				2-next download Sanny Builder 3
+				3-Make a folder where your going to keep all your work!:)
+				4-Next Make a new text document and name it what your mod's name is!
+				5-Now in your new text document, type this exact code if u want to activate your mod automatically
+				(only works with some codes):
+
+				{$CLEO}
+				0000:
+
+				while true
+				  wait 250
+				    (Insert Mod's Code Here)
+				end
+				
+				it may seem as though the code looks stupid and is indented and/or has too much spacing
+				but trust me it works if done right!
+
+				6-in the part that says (Insert Mod's Code Here) highlight from the first paranthesis to the last
+				and past your code in there!
+				7- now, if you want to press F4 to activate your mod(only works with some codes) then copy this code:
+
+				{$CLEO}
+				0000:
+
+				while true
+				  wait 250
+				  if
+				    0AB0:   key_pressed 0x73
+				  then
+				    (Insert Mod's Code Here)
+				  end
+				end
+
+
+				and paste your code on the (Insert Mod's Code Here) part!:)
+				8-Now open up Sanny Builder 3 after you have already installed it!:)
+				9-Now open up the text file you just made!:) with sanny builder 3
+				10-Next, go to the 'tools' option and go to 'Code Converter' and press MB -> SB
+				11-wait a minute.....now that your code is converted, it creates another text file called 
+				(whatever the name of the code is)_conv!
+				12-now you have two text files with different names but the same writing, ok, now close everything	
+				and go to the folder with all your work!
+				13-you might want to delte the old (first) text file, as it is no use to you!:)
+				14-open up Sanny Builder 3 again but this time open up the new text file that was converted from the old one,
+				now that its open, time to code it!
+				15-go to the sanny builder 3's option called 'run' and press 'compile' and a screen should pop up talking about something, just 				press ok, and your done!
+				16-install the Cleo Library by putting the folder called 'CLEO' in the GTA SA's main directory
+				17-copy the '.cs' file(your mod) that you made from your folder, and paste it in the CLEO Folder
+				18-run GTA SA and test it out
+				19-Enjoy!!!!!!!!!!!!!!!1
